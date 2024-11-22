@@ -1,0 +1,63 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "nearest-tailwind-color",
+  "title": "Nearest Tailwind Color",
+  "description": "Convert a hexcode to the nearest color from Tailwind's default palette.",
+  "icon": "extension-icon.png",
+  "author": "lukeberrypi",
+  "categories": [
+    "Design Tools",
+    "Developer Tools"
+  ],
+  "license": "MIT",
+  "commands": [
+    {
+      "name": "get-nearest-tailwind-color-hexcode",
+      "title": "Get Nearest Tailwind Color Hexcode",
+      "description": "Copy the nearest Tailwind color hexcode (e.g., #fafafa).",
+      "mode": "no-view",
+      "arguments": [
+        {
+          "name": "hexcode",
+          "placeholder": "#fafafa",
+          "type": "text",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "get-nearest-tailwind-color-name",
+      "title": "Get Nearest Tailwind Color Name",
+      "description": "Copy the nearest Tailwind color name (e.g., zinc-50).",
+      "mode": "no-view",
+      "arguments": [
+        {
+          "name": "hexcode",
+          "placeholder": "#fafafa",
+          "type": "text",
+          "required": true
+        }
+      ]
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "^1.86.0",
+    "@raycast/utils": "^1.17.0"
+  },
+  "devDependencies": {
+    "@raycast/eslint-config": "^1.0.11",
+    "@types/node": "20.8.10",
+    "@types/react": "18.3.3",
+    "eslint": "^8.57.0",
+    "prettier": "^3.3.3",
+    "typescript": "^5.4.5"
+  },
+  "scripts": {
+    "build": "ray build",
+    "dev": "ray develop",
+    "fix-lint": "ray lint --fix",
+    "lint": "ray lint",
+    "prepublishOnly": "echo \"\\n\\nIt seems like you are trying to publish the Raycast extension to npm.\\n\\nIf you did intend to publish it to npm, remove the \\`prepublishOnly\\` script and rerun \\`npm publish\\` again.\\nIf you wanted to publish it to the Raycast Store instead, use \\`npm run publish\\` instead.\\n\\n\" && exit 1",
+    "publish": "npx @raycast/api@latest publish"
+  }
+}
